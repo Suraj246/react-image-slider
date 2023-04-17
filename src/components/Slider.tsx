@@ -50,7 +50,7 @@ function Slider() {
                                         {index === current &&
                                             <Box className="flex">
                                                 <Box>
-                                                    <img src={image} alt="" className="img-slide" />
+                                                    <img src={image} alt={elem.title} className="img-slide" loading="lazy" />
                                                 </Box>
                                                 <Box className="content-container">
                                                     <Box style={{ display: "grid", gap: "3rem" }}>
@@ -66,7 +66,7 @@ function Slider() {
                                         {index === current &&
                                             <>
                                                 <Box>
-                                                    <img src={ImgData[0].image} alt="" className="img-slide" />
+                                                    <img src={ImgData[0].image} alt={ImgData[0].title} className="img-slide" loading="lazy" />
                                                 </Box>
                                                 <Box className="content-container">
                                                     <Box style={{ display: "grid", gap: "3rem" }}>
@@ -92,7 +92,7 @@ function Slider() {
                             {ImgData.map((elem, index) => {
                                 const { image } = elem;
                                 return (
-                                    <img key={index} src={image} alt=""
+                                    <img key={index} src={image} alt={elem.title} loading="lazy"
                                         className={current === index ? "" : "img-index"}
                                         onClick={() => {
                                             goToIndex(index)

@@ -1,38 +1,133 @@
-.App {
-  text-align: center;
+.slider-page {
+  display: flex;
+  justify-content: center;
+  padding: 3rem;
+  align-items: center;
+  background-color: #FFFFFF;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+
+
+.container-img {
+  display: grid;
+  width: 100vw;
+  height: fit-content;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.flex {
+  display: flex;
+  gap: 4rem;
+  justify-content: center;
+  width: 100%;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+
+.img-slider-container {
+  width: 100%;
+  height: fit-content;
+}
+
+.img-slide {
+  border-radius: 40px;
+  width: 57vw;
+  height: 66vh;
+  object-fit: cover;
+}
+
+.img-index {
+  filter: grayscale(100%);
+}
+
+
+.content-container {
+  width: 30vw;
+  background-color: #FFFFFF;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: space-between;
+}
+
+
+.content {
+  width: 100%;
+  font-size: 1rem;
+  color: #877c7c;
+  text-transform: capitalize;
+}
+
+.arrow-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  width: 60vw;
+}
+
+.img-container {
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  gap: 14px;
+  height: fit-content;
+  width: fit-content;
 }
 
-.App-link {
-  color: #61dafb;
+
+.img-container img {
+  width: 19%;
+  height: 17vh;
+  object-fit: cover;
+  border-radius: 20px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.flex-image {
+  display: flex;
+  gap: 4rem;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-top: 2rem;
+}
+
+.play-container {
+  width: 31vw;
+  text-align: center;
+}
+
+@media screen and (max-width: 857px) {
+  .flex {
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
   }
-  to {
-    transform: rotate(360deg);
+
+  .img-slide {
+    width: 100%;
+  }
+
+
+  .content-container {
+    width: 100%;
+  }
+
+  .flex-image {
+    gap: 1rem;
+  }
+
+  .arrow-container {
+    width: 100%;
+    gap: 2rem;
+  }
+
+  .img-container img {
+    width: 20%;
+    height: 8vh;
+    object-fit: cover;
+    border-radius: 20px;
+  }
+
+  .play-container {
+    width: fit-content;
   }
 }
